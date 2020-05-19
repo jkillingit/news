@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Google Fonts -->
-    <!-- Swap out "Roboto" for the font(s) you want to use -->
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
@@ -21,9 +20,41 @@
     <title>Weather & News</title>
   </head>
   <body>
+    
+    <div class="container mt-5">
+      <h1>Weather</h1>
+    </div>
+          
+        <div class="container mt-5">
+        <p>
+        <h4>Current Weather</h4>
+        </p>
+        <% for currcondition in @current %>
+            <p><%= currcondition %></p>
+        <% end %>
+        </div>
+
+        <div class="container mt-5">
+        <p>
+        <h4>8 Day Extended Forecast</h4>
+        </p>
+
+        
+        </div>
 
     <div class="container mt-5">
       <h1>News</h1>
+    </div>
+
+    <div class="container footer">
+      <div class="row my-5">
+        <div class="col-sm-6">
+          <h6><a href=https://newsapi.org/>Powered by News API</a></h6>
+        </div>
+        <div class="col-sm-6">
+          <h6>Established 2020</h6>
+        </div>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
