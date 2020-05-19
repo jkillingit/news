@@ -41,4 +41,5 @@ get "/" do
         puts "Full Article: #{article["url"]}"
         article_number = article_number + 1
     end
+    view "news"
 end
