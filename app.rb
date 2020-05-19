@@ -19,11 +19,14 @@ get "/" do
     @current = ["Temperature: #{@forecast["current"]["temp"]} degrees", "Conditions: #{@forecast["current"]["weather"][0]["description"]}"]
     puts @current
     puts "8 Day Extended forecast:"
+    extended = []
     day_number = 1
     for day in @forecast["daily"]
-        puts "#{day_number} Out: A high of #{day["temp"]["max"]} and #{day["weather"][0]["description"]}"
+        extended << "#{day_number} Days Out: #{day["weather"][0]["description"]} with a high of #{day["temp"]["max"]} degrees and a low of #{day["temp"]["min"]} degrees"
         day_number = day_number + 1
     end
+
+    @extfcast = extended[0, 7]
 
   ### Get the news
 
