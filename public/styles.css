@@ -7,3 +7,14 @@ h1 {
     text-decoration: underline;
     text-shadow: 2px 2px 2px gray
 }
+
+.jumbotron-weatherandnews {
+    background-attachment: fixed;
+    background-image: url(hub.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    min-height: 20em
+}
