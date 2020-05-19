@@ -34,15 +34,14 @@ get "/" do
   url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=#{newskey}"
   @news = HTTParty.get(url).parsed_response.to_hash
 
-    puts "Top Headlines"
+    stories = []
     article_number = 1
     for article in @news["articles"]
-        puts "#{article_number}: #{article["title"]}" 
-        puts "By #{article["author"]}"
-        puts "Preview: #{article["content"]}"
-        puts "#{article["urlToImage"]}"
-        puts "Full Article: #{article["url"]}"
+        stories << "#{article["url"]}>#{article_number}: #{article["title"]}" 
         article_number = article_number + 1
     end
+
+    @topstories = stories[0,10]
+
     view "news"
 end

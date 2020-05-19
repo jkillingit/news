@@ -22,7 +22,7 @@
   <body>
     
     <div class="container mt-5">
-      <h1>Weather</h1>
+      <h1>Weather at The Hub</h1>
     </div>
           
         <div class="container mt-5">
@@ -41,13 +41,19 @@
         <p><%= days %></p>
         <% end %>
         </p>
-
-
         </div>
 
     <div class="container mt-5">
-      <h1>News</h1>
+      <h1>News - Top 10 Headlines</h1>
     </div>
+
+        <div class="container mt-5">
+        <p>
+        <% for story in @topstories %>
+        <p><a href=<%= story %></a></p>
+        <% end %>
+        </p>
+        </div>
 
     <div class="container footer">
       <div class="row my-5">
